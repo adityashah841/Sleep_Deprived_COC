@@ -1,11 +1,16 @@
 import '../css/SwipeMain.css'
 import girlImg from '../assets/girl_img.jpg'
+import likeImg from '../assets/like.svg'
+import dislikeImg from '../assets/cancel.svg'
 
 export default function SwipeMain() {
+
+    const about = [`173cm`, `Sometimes`, `In College`, `Rarely`, `Never`, `Aries`]
+
     return(
         <div className="swipe-main">
             <div className="people-cards">
-                <img src={girlImg} alt="" />
+                <img src={girlImg} alt="profile-images" />
                 <div className="profile-desc">
                     <div className="profile-desc-main">
                         <div className="name-age">Sahil Doshi, 20</div>
@@ -13,8 +18,14 @@ export default function SwipeMain() {
                     </div>
                     <div className="profile-desc-about">
                         <div className="about-title">About Sahil</div>
-                        <div className="about-btns">
-
+                        <div>
+                            {about.map((item) => {
+                                return(
+                                    <button className="about-btns">
+                                        {item}
+                                    </button>
+                                )
+                            })}
                         </div>
                     </div>
                     <div className="profile-desc-location">
@@ -23,6 +34,14 @@ export default function SwipeMain() {
                         <div className="distance">3km Away</div>
                     </div>
                 </div>
+            </div>
+            <div className="swipe-btns">
+                <button className="dislike">
+                    <img src={dislikeImg} alt="" />
+                </button>
+                <button className="like">
+                    <img src={likeImg} alt="" />
+                </button>
             </div>
         </div>
     )

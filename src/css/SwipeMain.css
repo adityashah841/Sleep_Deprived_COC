@@ -2,18 +2,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     background-color: #f0f2f4;
     height: 100vh;
     width: calc(100vw - 375px)
 }
 
 .people-cards{
+    position: relative;
     display: flex;
     height: 80vh;
     width: calc(100vw - 650px);
     border-radius: 50px;
     background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%);
     overflow: hidden;
+    transform: translateY(29px);
 }
 
 .people-cards > img{
@@ -29,7 +32,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 4rem;
+    padding-inline: 4rem;
     padding-block: 8rem;
 }
 
@@ -56,3 +59,45 @@
     font-size: 1.5rem;
     font-weight: 500;
 }
+
+.about-btns{
+    border-radius: 100px;
+    background-color: white;
+    margin-right: .6rem;
+    margin-bottom: .6rem;
+    border: 1px solid black;
+}
+
+.people-cards > img:after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    height: 500px;
+    width: 500px;
+    background-color: #DD2476;
+}
+
+.swipe-btns{
+    display: flex;
+    gap: 4rem;
+    transform: translateY(-29px);
+}
+
+.swipe-btns > button{
+    border-radius: 50%;
+    padding: 1rem;
+    border: 2px solid black;
+}
+
+.like > img {
+    height: 80px;
+    width: 80px;
+}
+
+.dislike > img {
+    height: 80px;
+    width: 80px;
+}
+
