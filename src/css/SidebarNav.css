@@ -1,0 +1,31 @@
+.profile, .security, .explore{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    border: black;
+    background-color:#000000c7;
+    opacity: 0.85;
+    color: white;
+}
+
+.sidebar-nav {
+    background: linear-gradient(200.6deg, #FF512F 0%, #DD2476  51%, #AA2476  100%); /*light to dark gradient*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 90px;
+    transition-duration: 0.2s;
+    width: 375px;
+    padding-inline: .5rem;
+}
+
+.navButton {
+    filter: invert(90%);
+}

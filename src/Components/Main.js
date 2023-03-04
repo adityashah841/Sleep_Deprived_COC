@@ -1,14 +1,37 @@
-import SideBar from "./SideBar";
 import '../css/Main.css';
 import React from 'react'
+import ProfileMain from "../elements/ProfileMain";
+import SidebarProfile from '../elements/SidebarProfile';
+import SidebarSwipe from '../elements/SidebarSwipe';
+import SwipeMain from '../elements/SwipeMain';
+import { useState } from 'react'
+import SidebarNav from '../elements/SidebarNav';
 
 export default function Main(){
+
+    const [profile, setProfile] = useState(true)
+
+    function toggleProfile(){
+        setProfile(prevState => !prevState)
+    }
+
     return(
         <div className="main">
-            <SideBar/>
-            <div className="cards">
-                <img className="card" src={require("../assets/girl_img.jpg")} />
+            <div className="sidebar">
+                <SidebarNav 
+                    toggleProfile = {toggleProfile}
+                />
+                {profile? <SidebarProfile/>: <SidebarSwipe/>}
             </div>
+            {profile?
+                <>
+                    <ProfileMain/>
+                </>
+                :
+                <> 
+                    <SwipeMain/>
+                </>
+            }
         </div>
         
     )
