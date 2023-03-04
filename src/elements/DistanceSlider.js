@@ -15,7 +15,7 @@ export default function DistanceSlider() {
   };
 
   return (
-    <Box sx={{ width: 300}}>
+    <Box sx={{ width: 275}}>
       <Slider
         getAriaLabel={() => 'Age Preference'}
         value={value}

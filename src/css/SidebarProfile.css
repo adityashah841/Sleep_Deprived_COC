@@ -3,29 +3,62 @@
     width: 375px;
     height: calc(100vh - 90px);
     padding-inline: 1rem;
+    overflow: auto;
 }
 
 .subscription {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 15px;
-    border-radius: 8px;
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 100px;
     color: white;
     text-align: center;
     align-items: center;
     cursor: pointer;
-    /* background: black;
-    border: 0px solid black; */
-    border: black;
-    background-color:#000000c7;
+    font-weight: 500;
+    font-size: 1.5rem;
+    background-image:radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #eab440 30%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top,#d1d18e 8%, #D1B464 25%, #d09f2c 62.5%, #5d4a1f 100%);
 }
 
-/* .account-settings {
-    height: 100px;
-} */
+.acc-set-title, .desc-set-title, .set-title{
+    font-weight: 500;
+    margin-block: 1rem;
+}
 
-.boxes {
+.acc-set-btn{
     display: flex;
+    justify-content: space-between;
+    background-color: rgb(236, 236, 236);
+    border: 1px solid lightgray;
+    border-bottom: 0;
+    transform: scaleX(1.1);
+    padding-block: 1rem;
+    padding-inline: 2rem;
+}
+
+.acc-set-btn-small-span{
+    font-size: .9rem;
+}
+
+.slider{
+    background-color: rgb(236, 236, 236);
+    border: 1px solid lightgray;
+    border-bottom: 0;
+    transform: scaleX(1.1);
+    padding-block: 1rem;
+    padding-inline: 2rem;
+}
+
+.acc-set-phNo{
+    border-bottom: 1px solid lightgray;
+}
+
+.dist-pref, .age-pref{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discovery-settings .css-187mznn-MuiSlider-root {
+    color: #e32b2b;
 }
