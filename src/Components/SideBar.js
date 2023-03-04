@@ -1,11 +1,14 @@
 import '../css/SideBar.css'
+import RangeSlider from '../elements/RangeSlider'
+import React from 'react'
+import DistanceSlider from '../elements/DistanceSlider'
 
 function SideBar() {
     return (
-        <div>
+        <div className="sideBar">
             <nav className="nav">
             <button className="profile" /*onClick={() => console.log('Clicked')}*/>
-                Click Me!
+                Profile!
             </button>
             <button className="security" /*onClick={() => console.log('Clicked')}*/>
                 Security!
@@ -26,16 +29,25 @@ function SideBar() {
             <div className="account settings">
                 <h2>Account Settings</h2>
                 <div>
-                    1. email
+                    <h3>
+                        <button>1. Email</button>
+                    </h3>
                 </div>
                 <div>
-                    2. phone number
+                    <h3>
+                        <button>2. Phone Number</button>
+                    </h3>
                 </div>
             </div>
             <div classname="discovery settings">
                 <h2>Discovery Settings</h2>
                 <div>
-                    <input type="range" name="distance within" min="" max=""/>
+                    <h3>Age Preference</h3>
+                    <RangeSlider />
+                </div>
+                <div>
+                    <h3>Distance Preference</h3>
+                    <DistanceSlider />
                 </div>
             </div>
             <div classname="global settings">
