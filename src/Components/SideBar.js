@@ -8,6 +8,7 @@ function SideBar() {
         <div className="sideBar">
             <nav className="nav">
             <button className="profile" /*onClick={() => console.log('Clicked')}*/>
+                {/* <img src={"require(../assets/user-regular.svg)"} alt="My profile"/> */}
                 Profile!
             </button>
             <button className="security" /*onClick={() => console.log('Clicked')}*/>
