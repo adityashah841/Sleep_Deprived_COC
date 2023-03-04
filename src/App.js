@@ -1,20 +1,15 @@
 import './App.css';
-import SideBar from './Components/SideBar';
-import Navbar from './components/Navbar';
 import Main from './components/Main';
+import { Route } from 'react-router-dom';
+import Landing from './components/Landing';
 import { Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="app">
-      <div className="sideBar">
-        <SideBar />
-      </div>
-      <Navbar className="Navbar"/>
-      <Main/>
       <Routes>
-        {/* <Route path="/" element={<Home/>}/> */}
-        {/* <Route path="/about" element={<About/>}/> */}
+        <Route path="/app" element={<Main/>}/>
+        <Route path="/" element={<Landing/>}/>
       </Routes>
     </div>
   );

@@ -1,0 +1,55 @@
+.landing{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,0.5) ), url('../assets/landing_img.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+main{
+    flex-grow: 1;
+    /* margin-top: 10rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tagline{
+    font-size: 10rem;
+    color: white;
+    text-align: center;
+    line-height: 1;
+}
+
+.sign-in{
+    display: flex;
+    gap: 5rem;
+}
+         
+.login-btn, .sign-up-btn {
+    border: 0;
+    border-radius: 100px;
+    padding: .5rem 3rem;
+    font-weight: 500;
+    font-size: 2rem;
+    background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white; 
+}
+
+.login-btn:hover, .sign-up-btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+ 
+

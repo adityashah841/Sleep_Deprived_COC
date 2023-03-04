@@ -3,15 +3,13 @@
     border-color: black;
     /* border-radius: 50px; */
     /* background: linear-gradient(200.6deg, #e8649a, #e65d77); */
-    position: absolute;
-    left: 0px;
     width: 400px;
     height: 100vh;
     border: 3px solid black;
     padding: 1px;
 }
 
-#Profile {
+.profile {
     cursor: pointer;
     padding: 10px;
     border-radius: 100%;
