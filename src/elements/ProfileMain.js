@@ -1,5 +1,5 @@
 import '../css/ProfileMain.css'
-import girlImg from '../assets/girl_img.jpg'
+import girlImg from '../assets/guy_img.jpg'
 import likeImg from '../assets/like.svg'
 import dislikeImg from '../assets/cancel.svg'
 
@@ -19,9 +19,10 @@ export default function ProfileMain(){
                     <div className="profile-desc-about">
                         <div className="about-title">About Sahil</div>
                         <div>
-                            {about.map((item) => {
+                            {about.map((item,index) => {
                                 return(
-                                    <button className="about-btns">
+                                    <button className="about-btns"
+                                    key={index}>
                                         {item}
                                     </button>
                                 )
