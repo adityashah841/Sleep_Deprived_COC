@@ -80,6 +80,14 @@ select {
     font: inherit
 }
 
+#root{
+    min-height: 100vh;
+}
+
+.app{
+    min-height: 100vh;
+}
+
 [hidden] { display: none !important; }
 
 @media (prefers-reduced-motion: reduce) {
