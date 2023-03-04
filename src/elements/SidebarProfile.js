@@ -13,10 +13,10 @@ export default function SidebarProfile(){
             </div>
             <div className="account-settings">
                 <h2>Account Settings</h2>
-                <div className="box">1. Email</div>
-                <div className="box">2. Phone Number</div>
+                <div className="boxes">1. Email</div>
+                <div className="boxes">2. Phone Number</div>
             </div>
-            <div className="discovery settings">
+            <div className="discovery-settings">
                 <h2>Discovery Settings</h2>
                 <div>
                     <h3>Age Preference</h3>
@@ -27,10 +27,10 @@ export default function SidebarProfile(){
                     <DistanceSlider />
                 </div>
             </div>
-            <div className="global settings">
+            <div className="global-settings">
                 <h2>Global Settings</h2>
             </div>
-            <div className="Help & Support">
+            <div className="Help&Support">
                 <h2>Help & Support</h2>
             </div>
             <div className="Safety">
