@@ -1,5 +1,7 @@
 import '../css/SidebarSwipe.css'
 import { useState } from 'react'
+import SidebarSwipeMatches from './SidebarSwipeMatches'
+import SidebarSwipeMessages from './SidebarSwipeMessages'
 
 export default function SidebarSwipe(){
 
@@ -30,7 +32,7 @@ export default function SidebarSwipe(){
                     Messages
                 </button>
             </div>
-            {matches? <h1>Here you can see your matches</h1>: <h1>Your messages appear here</h1>}
+            {matches? <SidebarSwipeMatches />: <SidebarSwipeMessages />}
         </div>
     )
 }
