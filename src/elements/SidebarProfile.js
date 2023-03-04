@@ -1,27 +1,12 @@
-import '../css/SideBar.css'
+import '../css/SidebarProfile.css'
 import RangeSlider from '../elements/RangeSlider'
-import React from 'react'
 import DistanceSlider from '../elements/DistanceSlider'
 
-function SideBar() {
-    return (
-        <div className="sideBar">
-            <nav className="nav">
-            <button className="profile" /*onClick={() => console.log('Clicked')}*/>
-                Profile!
-            </button>
-            <button className="security" /*onClick={() => console.log('Clicked')}*/>
-                Security!
-            </button>
-            <button className="explore" /*onClick={() => console.log('Clicked')}*/>
-                Explore!
-            </button>
-            </nav>
-            <h2>
-                SideBar for Profile and Settings
-            </h2>
+export default function SidebarProfile(){
+    return(
+        <div className="sidebar-profile">
             <div className="subscription">
-                Cupid Pro
+                    Cupid Pro
             </div>
             <div className="subscription">
                 Cupid Plus
@@ -39,7 +24,7 @@ function SideBar() {
                     </h3>
                 </div>
             </div>
-            <div classname="discovery settings">
+            <div className="discovery settings">
                 <h2>Discovery Settings</h2>
                 <div>
                     <h3>Age Preference</h3>
@@ -50,20 +35,18 @@ function SideBar() {
                     <DistanceSlider />
                 </div>
             </div>
-            <div classname="global settings">
+            <div className="global settings">
                 <h2>Global Settings</h2>
             </div>
-            <div classname="Help & Support">
+            <div className="Help & Support">
                 <h2>Help & Support</h2>
             </div>
-            <div classname="Safety">
+            <div className="Safety">
                 <h2>Safety</h2>
             </div>
-            <div classname="Legal">
+            <div className="Legal">
                 <h2>Legal</h2>
             </div>
         </div>
     )
 }
-
-export default SideBar

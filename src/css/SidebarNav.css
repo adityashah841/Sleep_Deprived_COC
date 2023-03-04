@@ -1,16 +1,3 @@
-* {
-    color: #000000c7;
-}
-
-.sideBar {
-    border-width: 500px;
-    border: black;
-    left: 0px;
-    width: 375px;
-    height: 100vh;
-    border: 1px solid lightgrey;
-}
-
 .profile, .security, .explore{
     margin: 5px;
     cursor: pointer;
@@ -25,27 +12,14 @@
     text-align: center;
 }
 
-.subscription {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 15px;
-    border-radius: 8px;
-    color: white;
-    text-align: center;
-    align-items: center;
-    cursor: pointer;
-    background: black;
-    border: 0px solid black;
-}
-
-.nav {
+.sidebar-nav {
     background: linear-gradient(200.6deg, #FF512F 0%, #DD2476  51%, #AA2476  100%); /*light to dark gradient*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 87px;
+    height: 90px;
     transition-duration: 0.2s;
     position: relative;
+    width: 375px;
+    padding-inline: .5rem;
 }
