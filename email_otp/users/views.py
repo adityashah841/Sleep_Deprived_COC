@@ -12,19 +12,17 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 
 User = get_user_model()
+def register_email(email):
+    user = User.objects.create_user(email=email)
+    return user
 
 class RegisterEmail(APIView):
-    
-    def register_email(self, email):
-        user = User.objects.create_user(email=email)
-        return user
-    
     def post(self, request):    
         email = request.data.get('email')
         if email is None:
             return JsonResponse({'error': 'Email is required'})
         
-        email = self.register_email(email)
+        email = register_email(email)
         if email:
             return Response({'detail': 'Email registered successfully'}, status=status.HTTP_200_OK)
         else:
