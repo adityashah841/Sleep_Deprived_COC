@@ -1,0 +1,18 @@
+/* .app{
+  display: grid;
+  grid-template-areas: 
+  'sideBar main';
+  grid-template-columns: min-content 1fr;
+}
+
+.sideBar{
+  grid-area: sideBar;
+}
+
+.navbar{
+  grid-area: navbar;
+}
+
+.main{
+  grid-area: main;
+} */
