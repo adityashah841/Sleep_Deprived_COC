@@ -1,20 +1,49 @@
 .sideBar {
     border-width: 500px;
-    border-color: black;
+    border: black;
     /* border-radius: 50px; */
-    /* background: linear-gradient(200.6deg, #e8649a, #e65d77); */
-    position: absolute;
+    background: linear-gradient(200.6deg, #e8649a, #e65d77);
     left: 0px;
-    width: 400px;
+    width: 375px;
     height: 100vh;
-    border: 3px solid black;
+    border: 2px solid black;
     padding: 1px;
 }
 
-#Profile {
+.profile, .security, .explore{
+    margin: 5px;
     cursor: pointer;
     padding: 10px;
     border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: black;
-    background: steelblue;
+    background-color:#000000c7 ;
+    text-align: center; 
+    color: #ffffff;
+}
+
+.subscription {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    background: black;
+    border: 0px solid black;
+    color: #ffffff;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 87px;
+    transition-duration: 0.2s;
+    position: relative;
 }
