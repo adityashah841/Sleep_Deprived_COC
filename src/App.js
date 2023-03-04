@@ -1,5 +1,7 @@
 import './App.css';
-import SideBar from './SideBar';
+import SideBar from './Components/SideBar';
+import Navbar from './components/Navbar';
+import { Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -7,6 +9,11 @@ function App() {
       <div className="sideBar">
         <SideBar />
       </div>
+      <Navbar className="Navbar"/>
+      <Routes>
+        {/* <Route path="/" element={<Home/>}/> */}
+        {/* <Route path="/about" element={<About/>}/> */}
+      </Routes>
     </div>
   );
 }
