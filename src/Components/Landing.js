@@ -1,7 +1,15 @@
 import '../css/Landing.css'
 import Navbar from '../elements/Navbar'
+import { useNavigate } from "react-router-dom";
 
 export default function Landing(){
+
+    let navigate = useNavigate(); 
+    const createAccount = () =>{ 
+      let path = `/create-account`; 
+      navigate(path);
+    }
+
     return(
         <div className="landing">
             <Navbar className="navbar"/>
@@ -9,7 +17,7 @@ export default function Landing(){
                 <div className="tagline">Finding Partners</div>
                 <div className="sign-in">
                     <button className='login-btn'>Login</button>
-                    <button className='sign-up-btn'>Sign Up</button>
+                    <button onClick = {createAccount} className='sign-up-btn'>Sign Up</button>
                 </div>
             </main>
 
