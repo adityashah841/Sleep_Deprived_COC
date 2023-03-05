@@ -18,7 +18,8 @@ export default function Landing(){
         <div className="landing">
             <Navbar className="navbar"/>
             <main>
-                <div className="tagline">Finding Partners</div>
+                <div className="tagline">Date. Chat. Meet.</div>
+                {/* <div className="tagline">Finding Partners</div> */}
                 <div className="sign-in">
                     <button onClick = {login} className='login-btn'>Login</button>
                     <button onClick = {createAccount} className='sign-up-btn'>Sign Up</button>

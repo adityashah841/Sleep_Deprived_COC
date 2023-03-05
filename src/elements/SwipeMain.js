@@ -2,11 +2,14 @@ import '../css/SwipeMain.css'
 import likeImg from '../assets/like.svg'
 import dislikeImg from '../assets/cancel.svg'
 import data from '../../src/data.js'
-import { useState } from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 export default function SwipeMain() {
 
     const [index, setIndex] = useState(0)
+    const [dataF, setDataF] = useState()
 
     function incrementIndex() {
         if(index === data.length-1){
@@ -15,20 +18,50 @@ export default function SwipeMain() {
         setIndex(prev => prev + 1)
     }
 
-    console.log(index);
-    console.log(data);
+    let navigate = useNavigate()
+
+    useEffect(()=>{
+
+        const handleSubmit = async (event) => {
+            try {
+              const data = {
+                'user_id': '1'
+              };
+              axios.post(
+                "http://127.0.0.1:8000/final/rec",
+                data
+              ).then((response) => {
+                console.log(Object.values(response.data))
+                setDataF(Object.values(response.data))
+            })
+            } catch (error) {
+                console.log(error);
+            }
+          };
+    
+        handleSubmit()
+    })
+
+    if(!dataF){
+        console.log("hi");
+        return <h1>Loading</h1>
+    }
+
 
     return(
+        <> 
+    
+    
         <div className="swipe-main">
             <div className="people-cards">
-                <img src={data[index].img} alt="profile-images" />
+                <img src={data[`${index}`].img} alt="profile-images" />
                 <div className="profile-desc">
                     <div className="profile-desc-main">
-                        <div className="name-age">{data[index].name}, {data[index].age}</div>
+                        <div className="name-age">{dataF[`${index}`].name}, {dataF[`${index}`].age}</div>
                         <div className="college-name">{data[index].college}</div>
                     </div>
                     <div className="profile-desc-about">
-                        <div className="about-title">About {data[index].name}</div>
+                        <div className="about-title">About {dataF[`${index}`].name}</div>
                         <div>
                             {data[index].about.map((item,index) => {
                                 return(
@@ -40,7 +73,7 @@ export default function SwipeMain() {
                         </div>
                     </div>
                     <div className="profile-desc-location">
-                        <div className="location-title">{data[index].name} Location</div>
+                        <div className="location-title">{dataF[index].name} Location</div>
                         <div className="location">{data[index].location}</div>
                         <div className="distance">{data[index].dist}km Away</div>
                     </div>
@@ -55,5 +88,7 @@ export default function SwipeMain() {
                 </button>
             </div>
         </div>
+    }
+        </>
     )
 }
