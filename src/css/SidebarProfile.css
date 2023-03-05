@@ -62,3 +62,7 @@
 .discovery-settings .css-187mznn-MuiSlider-root {
     color: #e32b2b;
 }
+
+.logout, .legal, .safety, .help-and-support{
+    cursor: pointer;
+}

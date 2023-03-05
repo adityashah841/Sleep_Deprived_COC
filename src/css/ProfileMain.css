@@ -103,3 +103,15 @@
     height: 80px;
     width: 80px;
 }
+
+.profile-cards .editInfoImg{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    right: 20px;
+    top: 20px;
+}
+
+.profile-cards .editInfoImg:hover{
+    cursor: pointer;
+}

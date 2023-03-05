@@ -19,6 +19,7 @@ export default function Main(){
         <div className="main">
             <div className="sidebar">
                 <SidebarNav 
+                    profile = {profile}
                     toggleProfile = {toggleProfile}
                 />
                 {profile? <SidebarProfile/>: <SidebarSwipe/>}

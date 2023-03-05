@@ -1,7 +1,6 @@
 import '../css/SidebarSwipe.css'
 import { useState } from 'react'
 import SidebarSwipeMatches from './SidebarSwipeMatches'
-import SidebarSwipeMessages from './SidebarSwipeMessages'
 
 export default function SidebarSwipe(){
 
@@ -9,7 +8,8 @@ export default function SidebarSwipe(){
     const [messages, setMessages] = useState(false)
 
     const styles = {
-        textDecoration: 'underline'
+        textDecoration: 'underline',
+        backgroundColor: 'lightgray'
     }
 
     function matchesClick() {
@@ -22,6 +22,10 @@ export default function SidebarSwipe(){
         setMessages(true)
     }
 
+    const style = {
+        padding: '1rem',
+    }
+
     return(
         <div className="sidebar-swipe">
             <div className="tabs">
@@ -32,7 +36,7 @@ export default function SidebarSwipe(){
                     Messages
                 </button>
             </div>
-            {matches? <SidebarSwipeMatches />: <SidebarSwipeMessages />}
+            {matches? <SidebarSwipeMatches />: <h1 style={style}>You can find your messages here</h1>}
         </div>
     )
 }

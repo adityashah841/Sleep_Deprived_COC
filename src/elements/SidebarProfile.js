@@ -4,6 +4,7 @@ import DistanceSlider from '../elements/DistanceSlider'
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function SidebarProfile(){
@@ -23,6 +24,12 @@ export default function SidebarProfile(){
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
+
+    let navigate = useNavigate()
+
+    function navToLanding(){
+        navigate('/')
+    }
 
     return(
         <div className="sidebar-profile">
@@ -87,6 +94,9 @@ export default function SidebarProfile(){
             </div>
             <div className="legal">
                 <h2 className='set-title'>Legal</h2>
+            </div>
+            <div onClick = {navToLanding} className="logout">
+                <h2 className='set-title'>Logout</h2>
             </div>
         </div>
     )

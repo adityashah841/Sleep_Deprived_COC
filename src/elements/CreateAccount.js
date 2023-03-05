@@ -89,8 +89,7 @@ const CreateAccount = () => {
     //   );
     //   console.log(response);
     //   localStorage.setItem("email", response.data.email);
-      let pathname = "/app";
-      navigate(pathname);
+      navigate('/app');
     // } catch (error) {
     //   console.log(error);
     // }
@@ -269,7 +268,7 @@ const CreateAccount = () => {
             </Button>
           </Box>
           <div className="already-has-account">
-            Already have an Account?<NavLink to="/">Log In</NavLink>
+            Already have an Account?<NavLink to="/login">Log In</NavLink>
           </div>
           </div>
         </Box>
