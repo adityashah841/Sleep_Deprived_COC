@@ -1,5 +1,4 @@
 import '../css/SwipeMain.css'
-import girlImg from '../assets/girl_img.jpg'
 import likeImg from '../assets/like.svg'
 import dislikeImg from '../assets/cancel.svg'
 import data from '../../src/data.js'
@@ -10,7 +9,7 @@ export default function SwipeMain() {
     const [index, setIndex] = useState(0)
 
     function incrementIndex() {
-        if(index == data.length-1){
+        if(index === data.length-1){
             setIndex(0)
         }
         setIndex(prev => prev + 1)
