@@ -45,10 +45,10 @@ class Swipes(models.Model):
 
 class Recommendation(models.Model):
     id = models.BigIntegerField(primary_key=True)
-    height = models.TextField()
-    is_habit_drink = models.TextField()
-    is_habit_smoke = models.TextField()
-    is_verified = models.TextField()
-    what_to_find = models.TextField()
-    who_to_date = models.TextField()
-    score = models.TextField()
+    height = models.FloatField()
+    is_habit_drink = models.BigIntegerField()
+    is_habit_smoke = models.BigIntegerField()
+    is_verified = models.BigIntegerField()
+    what_to_find = models.BigIntegerField()
+    who_to_date = models.BigIntegerField()
+    score = models.FloatField()
