@@ -7,7 +7,7 @@
 
 .matches-cards {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: 150px;
     width: 100px;
     padding: .5rem;
