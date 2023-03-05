@@ -93,6 +93,6 @@ def recommendation(user_id):
 
     # swi = Swipes.objects.filter(id__exact=user_id, is_unmatch__exact=False)
     # nom = len(swi)
-    print(final_users)
+    print(list(final_users))
 
-    return final_users
+    return list(final_users)
