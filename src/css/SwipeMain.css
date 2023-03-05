@@ -68,17 +68,6 @@
     border: 1px solid black;
 }
 
-.people-cards > img:after{
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 30px;
-    height: 500px;
-    width: 500px;
-    background-color: #DD2476;
-}
-
 .swipe-btns{
     display: flex;
     gap: 4rem;
