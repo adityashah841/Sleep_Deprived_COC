@@ -6,8 +6,12 @@ export default function Landing(){
 
     let navigate = useNavigate(); 
     const createAccount = () =>{ 
-      let path = `/create-account`; 
+      let path = `/register`; 
       navigate(path);
+    }
+
+    const login = () => {
+        navigate('/login')
     }
 
     return(
@@ -16,7 +20,7 @@ export default function Landing(){
             <main>
                 <div className="tagline">Finding Partners</div>
                 <div className="sign-in">
-                    <button className='login-btn'>Login</button>
+                    <button onClick = {login} className='login-btn'>Login</button>
                     <button onClick = {createAccount} className='sign-up-btn'>Sign Up</button>
                 </div>
             </main>

@@ -85,6 +85,10 @@
     transform: translateY(-29px);
 }
 
+.swipe-btns > button:hover{
+    transform: scale(1.1);
+}
+
 .swipe-btns > button{
     border-radius: 50%;
     padding: 1rem;

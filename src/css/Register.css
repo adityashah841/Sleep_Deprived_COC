@@ -1,0 +1,39 @@
+.register{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,0.5) ), url('../assets/heart.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.register-card{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  
+    backdrop-filter: blur(15px);
+}
+
+.register-btns{
+    width: 300px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.already-have-acc{
+    margin-top: 1rem;
+}
+
+.login-bold{
+    font-weight: 500;
+    cursor: pointer;
+}

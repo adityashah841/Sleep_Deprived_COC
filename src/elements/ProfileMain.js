@@ -1,7 +1,6 @@
 import '../css/ProfileMain.css'
-import girlImg from '../assets/guy_img.jpg'
-import likeImg from '../assets/like.svg'
-import dislikeImg from '../assets/cancel.svg'
+import guyImg from '../assets/guy_img.jpg'
+import editInfoImg from '../assets/info.svg'
 
 export default function ProfileMain(){
 
@@ -10,7 +9,8 @@ export default function ProfileMain(){
     return(
         <div className="profile-main">
             <div className="profile-cards">
-                <img src={girlImg} alt="personal-profile-images" />
+                <img className="editInfoImg" src={editInfoImg} alt="" />
+                <img src={guyImg} alt="personal-profile-images" />
                 <div className="profile-desc">
                     <div className="profile-desc-main">
                         <div className="name-age">Sahil Doshi, 20</div>
